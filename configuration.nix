@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [
@@ -16,7 +16,7 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
 
-  # Filesystems, remove when using this config on my actual machine and not in a VM
+  # VM shared folder
   fileSystems."/mnt/nixos-share" = {
     device = "nixos-share";
     fsType = "virtiofs";
@@ -28,7 +28,11 @@
   networking.networkmanager.enable = true;
 
 
-  # Daemons
+  # Bluetooth
+  hardware.bluetooth.enable = true;
+
+
+  # Services
   services.resolved.enable = true;
   services.pipewire = {
     enable = true;
@@ -36,7 +40,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
   };
-
+  services.blueman.enable = true;
 
   # Nix
   nix.settings.experimental-features = [
@@ -46,36 +50,48 @@
   nixpkgs.config.allowUnfree = true;
 
 
-  # Locational config
+  # Locale
   time.timeZone = "Asia/Kolkata";
-  i18n.defaultLocale = "en_IN";
+  i18n.defaultLocale = "en_US.UTF-8";
 
 
   # Security
   security.rtkit.enable = true;
 
 
-  # Users
+  # User
   users.users.ironsing = {
     isNormalUser = true;
+
     extraGroups = [
       "wheel"
       "networkmanager"
     ];
+
+    shell = pkgs.zsh;
   };
 
 
-  # XDG portals are required for many Wayland apps
+  # Wayland / portals
   xdg.portal.enable = true;
-
-
-  # Useful for screensharing/file pickers/etc
   xdg.portal.extraPortals = [
     pkgs.xdg-desktop-portal-gtk
   ];
 
 
-  # Programs
+  # Hyprland
   programs.hyprland.enable = true;
+
+  # Git
   programs.git.enable = true;
+
+  # Zsh
+  programs.zsh.enable = true;
+
+  # dconf
+  programs.dconf.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    python3
+  ];
 }

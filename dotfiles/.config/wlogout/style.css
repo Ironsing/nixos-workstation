@@ -5,12 +5,15 @@
     0% {
         box-shadow: 0 0 30px @pink;
     }
+
     20% {
         box-shadow: 0 0 30px @pink;
     }
+
     80% {
         box-shadow: 0 0 30px @foreground;
     }
+
     100% {
         box-shadow: 0 0 30px @blue;
     }
@@ -38,7 +41,6 @@ button {
     border-radius: 60px;
     box-shadow: none;
     text-shadow: none;
-    animation: gradient_f 10s ease-in infinite;
 }
 
 button:hover {

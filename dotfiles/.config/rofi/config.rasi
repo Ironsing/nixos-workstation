@@ -6,13 +6,15 @@ configuration {
     display-drun: "Open ";
     display-emoji: "Emoji ";
     drun-display-format: "{icon} {name}";
-    modi: "run,drun,emoji";
+    modi: "run,drun";
+    xoffset: 0;
+    yoffset: 0;
 }
 
-@import "~/.config/colors/colors.rasi"
+@import "../colors/colors.rasi"
 
 * {
-    font: "JetbrainsMono Nerd Font 15";
+    font: "JetBrainsMono Nerd Font 15";
 }
 
 #window {
