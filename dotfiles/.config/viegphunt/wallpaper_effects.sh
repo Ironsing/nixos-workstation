@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 current_wallpaper_path=$(swww query | head -n 1 | awk -F'image: ' '/image:/ {print $2; exit}')
 destination_wallpaper_dir="$HOME/.cache/swww"

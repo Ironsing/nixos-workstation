@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 if pidof yad > /dev/null; then
     pkill yad

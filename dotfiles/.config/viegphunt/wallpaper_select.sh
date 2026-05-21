@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 if pidof rofi > /dev/null; then
     pkill rofi

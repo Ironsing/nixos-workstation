@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 wallpapers_dir="$HOME/Pictures/Wallpapers"
 
