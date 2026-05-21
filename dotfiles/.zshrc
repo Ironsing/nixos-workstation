@@ -1,4 +1,4 @@
-# ─── Meta ───────────────────────────────────────────────
+# ─── Abort if non-interactive ───────────────────────────────────────────────
 [[ $- != *i* ]] && return
 
 # ─── Keybinds ───────────────────────────────────────────
@@ -13,13 +13,10 @@ export FZF_DEFAULT_OPTS=" \
 --color=border:#313244,label:#CDD6F4"
 export FZF_TAB_COLORS='fg:#CDD6F4,bg:#1E1E2E,hl:#F38BA8,min-height=5'
 
-# ─── Zoxide ─────────────────────────────────
-# eval "$(zoxide init zsh)"
-
 # ─── Startup toys ──────────────────────────────────────
 pokemon-colorscripts -s --no-title --name charizard --form gmax
 
-# aliases
+# ─── Aliases ──────────────────────────────────────
 alias ls='eza --icons --color=always'
 alias ll='eza --icons --color=always -l'
 alias la='eza --icons --color=always -a'

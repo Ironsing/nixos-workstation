@@ -6,7 +6,7 @@
 
     # We can symlink entire directories, but there's a severe problem with that approach:
     # If any other home-manager module tries to place a file inside such a directory, it follows the symlink,
-    # ends up in the Nix store, and fails to write because it's now outside $HOME. 
+    # ends up in the Nix store, and fails to write because it's now outside $HOME.
     # In short, you can only symlink whole directories if no other module tries to write to them.
 
     # ─────────────────────────────────────────────
@@ -27,11 +27,14 @@
     "ghostty/themes/catppuccin-mocha".source = ../dotfiles/.config/ghostty/themes/catppuccin-mocha;
 
     # ─────────────────────────────────────────────
-    # Hyprland
+    # Hyprlock
     # ─────────────────────────────────────────────
     "hypr/hyprland.conf".source = ../dotfiles/.config/hypr/hyprland.conf;
     "hypr/hyprlock.conf".source = ../dotfiles/.config/hypr/hyprlock.conf;
 
+    # ─────────────────────────────────────────────
+    # Hyprland
+    # ─────────────────────────────────────────────
     "hypr/conf/animation.conf".source = ../dotfiles/.config/hypr/conf/animation.conf;
     "hypr/conf/appearance.conf".source = ../dotfiles/.config/hypr/conf/appearance.conf;
     "hypr/conf/autostart.conf".source = ../dotfiles/.config/hypr/conf/autostart.conf;
@@ -61,7 +64,7 @@
     "swaync/style.css".source = ../dotfiles/.config/swaync/style.css;
 
     # ─────────────────────────────────────────────
-    # Viegphunt scripts
+    # Scripts
     # ─────────────────────────────────────────────
     "viegphunt/app_launcher.sh".source = ../dotfiles/.config/viegphunt/app_launcher.sh;
     "viegphunt/clipboard_launcher.sh".source = ../dotfiles/.config/viegphunt/clipboard_launcher.sh;
