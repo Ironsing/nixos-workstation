@@ -1,18 +1,13 @@
 { config, pkgs, lib, ... }:
 
 {
-  imports = [
-    ./hardware-configuration.nix
-  ];
-
-
   # System
   system.stateVersion = "25.11";
 
 
   # Boot
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda";
+  boot.loader.grub.device = "/dev/vda"; # Adjust this
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
 
@@ -42,6 +37,7 @@
   };
   services.blueman.enable = true;
 
+
   # Nix
   nix.settings.experimental-features = [
     "nix-command"
@@ -62,7 +58,6 @@
   # User
   users.users.ironsing = {
     isNormalUser = true;
-
     extraGroups = [
       "wheel"
       "networkmanager"
@@ -79,18 +74,10 @@
   ];
 
 
-  # Hyprland
   programs.hyprland.enable = true;
-
-  # Git
   programs.git.enable = true;
-
-  # Zsh
   programs.zsh.enable = true;
-
-  # dconf
   programs.dconf.enable = true;
-
   environment.systemPackages = with pkgs; [
     python3
   ];

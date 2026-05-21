@@ -1,5 +1,5 @@
 {
-  description = "Aayush's NixOS system";
+  description = "Ironsing's NixOS workstation";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
@@ -19,6 +19,7 @@
 
       modules = [
         ./configuration.nix
+        ./hardware-configuration.nix
 
         home-manager.nixosModules.home-manager
         {
