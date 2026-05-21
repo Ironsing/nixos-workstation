@@ -2,16 +2,4 @@ font-family = JetBrainsMono Nerd Font Mono
 font-size = 12
 
 theme = catppuccin-mocha
-background-opacity = 0.8
-
-# Ctrl+C → interrupt foreground process (SIGINT)
-keybind = ctrl+c=send_signal:SIGINT
-
-# Ctrl+Shift+C → copy selection
-keybind = ctrl+shift+c=copy_to_clipboard
-
-# Ctrl+Shift+V → paste
-keybind = ctrl+shift+v=paste_from_clipboard
-
-# Optional safety: keep Ctrl+V neutral (avoid weird partial overrides)
-keybind = ctrl+v=ignore
+background-opacity = 0.7
