@@ -11,7 +11,7 @@ configuration {
     yoffset: 0;
 }
 
-@import "../colors/colors.rasi"
+@import "~/.config/colors/colors.rasi"
 
 * {
     font: "JetBrainsMono Nerd Font 15";
