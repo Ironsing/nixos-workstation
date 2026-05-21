@@ -50,7 +50,8 @@
     # ─────────────────────────────────────────────
     # Oh My Posh
     # ─────────────────────────────────────────────
-    "oh-my-posh/viet.omp.json".source = ../dotfiles/.config/oh-my-posh/viet.omp.json;
+    "oh-my-posh/jandedobbeleer.omp.json".source =
+      ../dotfiles/.config/oh-my-posh/jandedobbeleer.omp.json;
 
     # ─────────────────────────────────────────────
     # Rofi
@@ -69,7 +70,6 @@
     "viegphunt/app_launcher.sh".source = ../dotfiles/.config/viegphunt/app_launcher.sh;
     "viegphunt/clipboard_launcher.sh".source = ../dotfiles/.config/viegphunt/clipboard_launcher.sh;
     "viegphunt/emoji_launcher.sh".source = ../dotfiles/.config/viegphunt/emoji_launcher.sh;
-    "viegphunt/install_archpkg.sh".source = ../dotfiles/.config/viegphunt/install_archpkg.sh;
     "viegphunt/key_hints.sh".source = ../dotfiles/.config/viegphunt/key_hints.sh;
     "viegphunt/wallpaper_effects.sh".source = ../dotfiles/.config/viegphunt/wallpaper_effects.sh;
     "viegphunt/wallpaper_random.sh".source = ../dotfiles/.config/viegphunt/wallpaper_random.sh;

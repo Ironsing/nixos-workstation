@@ -6,7 +6,8 @@ configuration {
     display-drun: "Open ";
     display-emoji: "Emoji ";
     drun-display-format: "{icon} {name}";
-    modi: "run,drun";
+    modi: "run,drun,window";
+    matching: "fuzzy";
     xoffset: 0;
     yoffset: 0;
 }

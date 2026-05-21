@@ -1,5 +1,8 @@
 {
     "$schema": "/etc/xdg/swaync/configSchema.json",
+    "group-by": "app-name",
+    "notification-inline-replies": true,
+    "notification-actions": true,
     "positionX": "right",
     "positionY": "top",
     "cssPriority": "user",
