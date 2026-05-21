@@ -7,18 +7,19 @@ fi
 yad --center --title="Keybinding Hints" --no-buttons --list \
     --column=Key: --column="" --column=Description: \
     --timeout-indicator=bottom \
-"  =   "          "        "  "SUPER KEY (Windows Key Button)" \
+"  =  Ctrl "          "        "  "MAIN MODIFIER (Ctrl)" \
 "" "" "" \
 "  H"              "        "  "Show keybinding hints" \
 "  Space"          "        "  "Open terminal" \
-"  E"              "        "  "Open file manager" \
+"  F"              "        "  "Open file manager" \
 "  B"              "        "  "Open browser" \
+"  E"              "        "  "Open editor" \
 "" "" "" \
 "  Shift Ctrl Esc" "        "  "Exit Hyprland" \
 "  Q"              "        "  "Close active window" \
 "  Shift Q"        "        "  "Kill active window by PID" \
 "" "" "" \
-"  F"              "        "  "Toggle floating" \
+"  Shift F"              "        "  "Toggle floating" \
 "  P"              "        "  "Toggle pseudo (dwindle)" \
 "  J"              "        "  "Toggle split (dwindle)" \
 "" "" "" \
