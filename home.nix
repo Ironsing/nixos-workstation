@@ -19,7 +19,6 @@
     eza # better ls
     fastfetch # system info display
     pokemon-colorscripts # terminal startup art
-    tmux # terminal multiplexer
 
     # ─── Hyprland / Wayland Core ───────────────────────────────
     ghostty # terminal emulator
