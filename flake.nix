@@ -25,14 +25,14 @@
         inherit system;
 
         modules = [
-          ./configuration.nix
-          ./hardware-configuration.nix
+          ./software-configuration.nix
+          ./active-hardware-configuration.nix
 
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.ironsing = import ./home.nix;
+            home-manager.users.ironsing = import ./home-configuration.nix;
           }
         ];
       };
