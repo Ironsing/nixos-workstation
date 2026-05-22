@@ -12,11 +12,27 @@
     firefox
     discord
     spotify
-    vscode
+    vscode # config is managed via settings sync, not home-manager
+
+    # ─── Development ───────────────────────────────────────
+    # --- Python ---
+    uv
+    # --- Rust ---
+    rustup
+    # --- Web ---
+    nodejs
 
     # ─── Terminal / Shell Utilities ────────────────────────────
     bat # better cat
     eza # better ls
+    zoxide # better cd
+    fzf
+    fd
+    ripgrep
+    jq
+    tmux
+    just
+    tealdeer
     fastfetch # system info display
     pokemon-colorscripts # terminal startup art
 

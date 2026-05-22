@@ -89,4 +89,6 @@
   home.sessionVariables = {
     JQ_COLORS = "0;90:0;31:0;32:0;36:0;33:1;35:1;37:1;34";
   }; # programs.jq.colors doesn't seem to work, so we have to set the env var directly
+
+  programs.uv.enable = true;
 }
