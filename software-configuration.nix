@@ -11,14 +11,10 @@
 
   # Boot
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda"; # Adjust this
+  boot.loader.grub.efiSupport = true;
+  boot.loader.grub.device = "nodev";
+  boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  # VM shared folder
-  fileSystems."/mnt/nixos-share" = {
-    device = "nixos-share";
-    fsType = "virtiofs";
-  };
 
   # Networking
   networking.hostName = "nixos";
@@ -36,6 +32,7 @@
     alsa.support32Bit = true;
   };
   services.blueman.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   # Nix
   nix.settings.experimental-features = [

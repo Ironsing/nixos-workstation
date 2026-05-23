@@ -46,6 +46,7 @@
     "hypr/conf/programs.conf".source = ../dotfiles/.config/hypr/conf/programs.conf;
     "hypr/conf/windowrule.conf".source = ../dotfiles/.config/hypr/conf/windowrule.conf;
     "hypr/conf/workspaces.conf".source = ../dotfiles/.config/hypr/conf/workspaces.conf;
+    "hypr/conf/monitor.conf".source = ../dotfiles/.config/hypr/conf/monitor.conf;
 
     # ─────────────────────────────────────────────
     # Oh My Posh

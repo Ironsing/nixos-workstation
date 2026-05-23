@@ -26,8 +26,7 @@
 
         modules = [
           ./software-configuration.nix
-          ./active-hardware-configuration.nix
-
+          ./lib/hardware-configuration-modules/loq-workstation.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

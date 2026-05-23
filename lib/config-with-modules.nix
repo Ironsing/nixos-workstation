@@ -91,4 +91,22 @@
   }; # programs.jq.colors doesn't seem to work, so we have to set the env var directly
 
   programs.uv.enable = true;
+
+  programs.git = {
+    enable = true;
+    settings = {
+      user.name = "Ironsing";
+      user.email = "82096630+Ironsing@users.noreply.github.com";
+
+      init.defaultBranch = "main";
+      core.editor = "code --wait";
+
+      alias = {
+        st = "status";
+        co = "checkout";
+        cm = "commit";
+        lg = "log --oneline --graph --decorate";
+      };
+    };
+  };
 }
