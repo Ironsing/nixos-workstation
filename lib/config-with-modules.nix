@@ -109,4 +109,6 @@
       };
     };
   };
+
+  programs.ssh.enable = true;
 }
