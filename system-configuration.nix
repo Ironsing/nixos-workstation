@@ -19,20 +19,19 @@
   # Networking
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
+  services.resolved.enable = true;
 
   # Bluetooth
   hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
 
-  # Services
-  services.resolved.enable = true;
+  # Audio
   services.pipewire = {
     enable = true;
     pulse.enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
   };
-  services.blueman.enable = true;
-  services.gnome.gnome-keyring.enable = true;
 
   # Nix
   nix.settings.experimental-features = [
@@ -46,6 +45,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Security
+  services.gnome.gnome-keyring.enable = true;
   security.rtkit.enable = true;
 
   # User

@@ -25,7 +25,7 @@
         inherit system;
 
         modules = [
-          ./software-configuration.nix
+          ./system-configuration.nix
           ./lib/hardware-configuration-modules/loq-workstation.nix
           home-manager.nixosModules.home-manager
           {

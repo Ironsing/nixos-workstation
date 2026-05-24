@@ -26,6 +26,7 @@
     bat # better cat
     eza # better ls
     zoxide # better cd
+    oh-my-posh
     fzf
     fd
     ripgrep
@@ -56,7 +57,6 @@
     libsForQt5.qtstyleplugin-kvantum # Qt theming engine
 
     # ─── Input / IME ───────────────────────────────────────────
-    fcitx5 # input method framework
     wtype # Wayland typing automation tool
 
     # ─── Clipboard ─────────────────────────────────────────────
@@ -75,7 +75,6 @@
     pamixer # PulseAudio/PipeWire volume CLI
     pavucontrol # graphical audio control panel
     playerctl # media key control interface
-    pulseaudio # compatibility utilities
 
     # ─── Bluetooth and Networking ────────────────────────────────
     blueman # Bluetooth GUI
