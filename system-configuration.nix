@@ -69,6 +69,7 @@
   programs.git.enable = true;
   programs.zsh.enable = true;
   programs.dconf.enable = true;
+  programs.steam.enable = true;
   environment.systemPackages = with pkgs; [
     python3
   ];
