@@ -28,9 +28,9 @@
         "cursor": true
     },
     "bluetooth": {
-        "format": " 󰂯 ",
-        "format-disabled": " 󰂲 ",
-        "format-connected": " 󰂱 ",
+        "format": "󰂯",
+        "format-disabled": "󰂲",
+        "format-connected": "󰂱",
         "on-click": "blueman-manager"
     },
     "network": {

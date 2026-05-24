@@ -71,6 +71,7 @@ tooltip {
 
 #bluetooth {
     color: @yellow;
+    font-size: 18px;
 }
 
 #network {
