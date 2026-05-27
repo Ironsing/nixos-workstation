@@ -33,6 +33,22 @@
     alsa.support32Bit = true;
   };
 
+  # Disable the charging cap of 80% that I set on windows and never removed
+  systemd.services.disable-lenovo-conservation-mode = {
+    description = "Disable Lenovo conservation mode";
+
+    wantedBy = [ "multi-user.target" ];
+    after = [ "multi-user.target" ];
+
+    serviceConfig = {
+      Type = "oneshot";
+    };
+
+    script = ''
+      echo 0 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
+    '';
+  };
+
   # Nix
   nix.settings.experimental-features = [
     "nix-command"

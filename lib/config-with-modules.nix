@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # Depends on adw-gtk3, whitesur-icon-theme, and bibata-cursors
   # Controls just GTK themeing
   gtk = {
     enable = true;
@@ -20,7 +19,6 @@
     };
   };
 
-  # Depends on tmuxPlugins
   # Controls tmux settings, bindings, and themeing
   programs.tmux = {
     enable = true;
@@ -36,7 +34,6 @@
     extraConfig = builtins.readFile ../dotfiles/.tmux.conf;
   };
 
-  # Depends on zsh-completions, fzf, zoxide, pokemon-colorscripts, eza, lazygit, and lazydocker
   # Controls zsh, FZF styling (!) and aliases
   programs.zsh = {
     enable = true;

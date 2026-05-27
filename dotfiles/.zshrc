@@ -25,3 +25,7 @@ alias lt='eza --icons --color=always -a --tree --level=1'
 alias grep='grep --color=always'
 alias lzg='lazygit'
 alias lzd='lazydocker'
+alias rebuild="sudo nixos-rebuild switch"
+alias c='clear'
+alias rb='reboot'
+alias sd='shutdown now'
