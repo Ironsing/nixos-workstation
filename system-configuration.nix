@@ -19,11 +19,37 @@
   # Networking
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
-  services.resolved.enable = true;
+  services.resolved.enable = false;
+  networking.networkmanager.dns = "none";
+  networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
 
   # Bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
+
+  # Graphics
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.graphics.enable = true;
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = true;
+    # Fine-grained runtime PM
+    powerManagement.finegrained = true;
+    # Use proprietary driver
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    prime = {
+      offload.enable = true;
+      # Enables the helper command:
+      # nvidia-offload <program>
+      offload.enableOffloadCmd = true;
+      # These MUST match lspci output
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
+  };
+  hardware.nvidia-container-toolkit.enable = true;
 
   # Audio
   services.pipewire = {
@@ -33,19 +59,16 @@
     alsa.support32Bit = true;
   };
 
-  # Disable the charging cap of 80% that I set on windows and never removed
+  # Battery cap control
   systemd.services.disable-lenovo-conservation-mode = {
     description = "Disable Lenovo conservation mode";
-
     wantedBy = [ "multi-user.target" ];
     after = [ "multi-user.target" ];
-
     serviceConfig = {
       Type = "oneshot";
     };
-
     script = ''
-      echo 0 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
+      echo 1 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
     '';
   };
 
@@ -55,6 +78,12 @@
     "flakes"
   ];
   nixpkgs.config.allowUnfree = true;
+
+  # Wayland / portals
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [
+    pkgs.xdg-desktop-portal-gtk
+  ];
 
   # Locale
   time.timeZone = "Asia/Kolkata";
@@ -75,12 +104,11 @@
     shell = pkgs.zsh;
   };
 
-  # Wayland / portals
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [
-    pkgs.xdg-desktop-portal-gtk
-  ];
-
+  # Programs
+  services.ollama = {
+    enable = true;
+    package = pkgs.ollama-cuda;
+  };
   programs.hyprland.enable = true;
   programs.git.enable = true;
   programs.zsh.enable = true;
@@ -88,5 +116,9 @@
   programs.steam.enable = true;
   environment.systemPackages = with pkgs; [
     python3
+    mesa-demos
+    vulkan-tools
+    pciutils
+    nvtopPackages.nvidia
   ];
 }
