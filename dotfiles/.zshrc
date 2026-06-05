@@ -26,6 +26,7 @@ alias grep='grep --color=always'
 alias lzg='lazygit'
 alias lzd='lazydocker'
 alias rebuild="sudo nixos-rebuild switch"
+alias update="sudo nixos-rebuild switch --upgrade"
 alias c='clear'
 alias rb='reboot'
 alias sd='shutdown now'
