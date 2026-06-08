@@ -14,7 +14,7 @@ export FZF_DEFAULT_OPTS=" \
 export FZF_TAB_COLORS='fg:#CDD6F4,bg:#1E1E2E,hl:#F38BA8,min-height=5'
 
 # ─── Startup toys ──────────────────────────────────────
-pokemon-colorscripts -s --no-title --name charizard --form gmax
+pokemon-colorscripts --no-title --name charizard --form mega-x
 
 # ─── Aliases ──────────────────────────────────────
 alias ls='eza --icons --color=always'
