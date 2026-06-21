@@ -13,6 +13,8 @@
     discord
     spotify
     vscode # config is managed via settings sync, not home-manager
+    lunar-client
+    nixfmt
 
     # ─── Development ───────────────────────────────────────
     # --- Python ---

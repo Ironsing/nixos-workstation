@@ -21,7 +21,10 @@
   networking.networkmanager.enable = true;
   services.resolved.enable = false;
   networking.networkmanager.dns = "none";
-  networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
+  networking.nameservers = [
+    "1.1.1.1"
+    "8.8.8.8"
+  ];
 
   # Bluetooth
   hardware.bluetooth.enable = true;
@@ -29,7 +32,10 @@
 
   # Graphics
   services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.graphics.enable = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = true;
@@ -113,7 +119,10 @@
   programs.git.enable = true;
   programs.zsh.enable = true;
   programs.dconf.enable = true;
-  programs.steam.enable = true;
+  programs.steam = {
+    enable = true;
+    gamescopeSession.enable = true; # optional
+  };
   environment.systemPackages = with pkgs; [
     python3
     mesa-demos
